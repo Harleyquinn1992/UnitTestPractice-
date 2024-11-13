@@ -5,7 +5,7 @@
 #include <gtest/gtest.h>
 #include "Password.h"
 
-class PracticeTest : public ::testing::Test
+class PasswordTest : public ::testing::Test
 {
 	protected:
 		PracticeTest(){} //constructor runs before each test
