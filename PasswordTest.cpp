@@ -20,14 +20,14 @@ TEST(PasswordTest, single_letter_password)
 	int actual = my_password.count_leading_characters("Z");
 	ASSERT_EQ(1, actual);
 }
-TEST(PasswordTest, double_letter_password)
+TEST(PasswordTest, double_letter)
 {
 	Password my_password;
-	int actual = my_password.count_leading_characters("BbbB")
-	ASSERT_EQ(1, actual);
+	int actual = my_password.count_leading_characters("BBubble")
+	ASSERT_EQ(2, actual);
 }
 
-TEST(PasswordTest, special_characters_leading)
+TEST(PasswordTest, special_char)
 {
     Password my_password;
     int actual = my_password.count_leading_characters("###Hello");
@@ -52,6 +52,6 @@ TEST(PasswordTest, space_password)
 TEST(PasswordTest, no_case)
 {
 	Password my_password;
-	int actual = my_password.has_mixed_case("$%#@");
+	int actual = my_password.has_mixed_case("$#$@");
 	ASSERT_EQ(false, actual);
 }
